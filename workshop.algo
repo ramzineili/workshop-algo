@@ -1,0 +1,12 @@
+ALGORITHM workshop
+VAR
+    sentence : STRING
+    numcharacters : INTEGER
+    numwords : INTEGER
+    numvowels : INTEGER
+BEGIN
+    read (sentance)
+    IF () THEN
+        set_instructions
+    END_IF
+END
