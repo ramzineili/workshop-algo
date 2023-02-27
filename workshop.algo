@@ -1,12 +1,29 @@
-ALGORITHM workshop
+ALGORITHM sentences
 VAR
-    sentence : STRING
-    numcharacters : INTEGER
-    numwords : INTEGER
-    numvowels : INTEGER
+ch:char;
+sentence:string;
+sentence_counter:INTEGER;
+words_counter:INTEGER;
+vowels_counter:INTEGER;
+i:INTEGER;
 BEGIN
-    read (sentance)
-    IF () THEN
-        set_instructions
-    END_IF
+sentence:="";
+words_counter:=1;
+vowels_counter:=0;
+REPEAT
+read(ch);
+sentence := sentence + ch;
+UNTIL (ch='.');
+sentence_counter := sentence.length;
+FOR i FROM 0 TO sentence.length-1 STEP 1  DO
+IF (sentence[i]=" ") THEN
+words_counter:=words_counter+1;
+END_IF
+IF ( sentence[i]='a'or sentence[i]='e' or sentence[i]='u' or sentence[i]='o' or sentence[i]='i') THEN
+vowels_counter:=vowels_counter+1;
+END_IF
+END_FOR
+write(sentence_counter);
+write(words_counter);
+write(vowels_counter);
 END
